@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "ng test"
+    "test": "ng test",
+    "start": "node server.js https://3.34.132.124:4443 MY_SECRET"
   },
   "repository": {
     "type": "git",
