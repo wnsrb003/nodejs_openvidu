@@ -21,7 +21,7 @@ function joinSession() {
 		// --- 2) Init a session ---
 
 		session = OV.initSession();
-
+		// console.log(`session : ${JSON.stringify(session)}`);
 		// --- 3) Specify the actions when events take place in the session ---
 
 		// On every new Stream received...
@@ -33,7 +33,6 @@ function joinSession() {
 
 			// When the HTML video has been appended to DOM...
 			subscriber.on('videoElementCreated', (event) => {
-
 				// Add a new HTML element for the user's name and nickname over its video
 				appendUserData(event.element, subscriber.stream.connection);
 			});
@@ -58,12 +57,10 @@ function joinSession() {
 			.then(() => {
 
 				// --- 5) Set page layout for active call ---
-
 				var userName = $("#user").val();
 				$('#session-title').text(sessionName);
 				$('#join').hide();
 				$('#session').show();
-
 
 				// Here we check somehow if the user has 'PUBLISHER' role before
 				// trying to publish its stream. Even if someone modified the client's code and
@@ -305,7 +302,8 @@ function initMainVideoThumbnail() {
 }
 
 function isPublisher(userName) {
-	return userName.includes('publisher');
+	// return userName.includes('publisher');
+	return true
 }
 
 function cleanSessionView() {
