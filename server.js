@@ -45,7 +45,7 @@ var options = {
   key: fs.readFileSync("openvidukey.pem"),
   cert: fs.readFileSync("openviducert.pem"),
 };
-https.createServer(options, app).listen(443);
+https.createServer(options, app).listen(8443);
 
 // Mock database
 var users = [
@@ -84,7 +84,7 @@ var mapSessions = {};
 // Collection to pair session names with tokens
 var mapSessionNamesTokens = {};
 
-console.log("App listening on port 443");
+console.log("App listening on port 8443");
 
 /* CONFIGURATION */
 
