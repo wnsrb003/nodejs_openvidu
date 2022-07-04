@@ -130,9 +130,8 @@ app.post("/api-sessions/get-token", function (req, res) {
     var sessionName = req.body.sessionName;
 
     // Role associated to this user
-    var role = users.find(u => (u.user === req.session.loggedUser)).role;
-    console.log(role)
-    // var role = OpenViduRole.PUBLISHER;
+    // var role = users.find(u => (u.user === req.session.loggedUser)).role;
+    var role = OpenViduRole.PUBLISHER;
 
     // Optional data to be passed to other users when this user connects to the video-call
     // In this case, a JSON with the value we stored in the req.session object on login
