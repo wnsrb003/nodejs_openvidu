@@ -42,7 +42,23 @@ var options = {
 https.createServer(options, app).listen(5000);
 
 // Mock database
-var users = [{
+var users = [
+    {
+        user: "1",
+        pass: "1",
+        role: OpenViduRole.PUBLISHER
+    },
+    {
+        user: "2",
+        pass: "2",
+        role: OpenViduRole.PUBLISHER
+    },
+    {
+        user: "3",
+        pass: "3",
+        role: OpenViduRole.PUBLISHER
+    },
+    {
     user: "publisher1",
     pass: "pass",
     role: OpenViduRole.PUBLISHER
