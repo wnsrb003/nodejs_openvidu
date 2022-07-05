@@ -1,7 +1,8 @@
 /* CONFIGURATION */
 
-var OpenVidu = require("openvidu-node-client").OpenVidu;
-var OpenViduRole = require("openvidu-node-client").OpenViduRole;
+// var OpenVidu = require("openvidu-node-client").OpenVidu;
+import {OpenVidu, OpenViduRole} from "openvidu-node-client";
+// var OpenViduRole = require("openvidu-node-client").OpenViduRole;
 
 // Check launch arguments: must receive openvidu-server URL and the secret
 if (process.argv.length != 4) {
@@ -12,11 +13,19 @@ if (process.argv.length != 4) {
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 // Node imports
-var express = require("express");
-var fs = require("fs");
-var session = require("express-session");
-var https = require("https");
-var bodyParser = require("body-parser"); // Pull information from HTML POST (express4)
+// var express = require("express");
+import express from "express";
+// var fs = require("fs");
+import fs from "fs";
+// var session = require("express-session");
+import session from "express-session";
+// var https = require("https");
+import https from "https";
+// var bodyParser = require("body-parser"); // Pull information from HTML POST (express4)
+import bodyParser from "body-parser"
+import path from 'path';
+const __dirname = path.resolve();
+
 var app = express(); // Create our app with express
 
 // Server configuration

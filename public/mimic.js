@@ -1,26 +1,3 @@
-// Mimic Me!
-// Fun game where you need to express emojis being displayed
-
-// --- Affectiva setup ---
-// The affdex SDK Needs to create video and canvas elements in the DOM
-// var divRoot = $("#local-video-undefined")[0];  // div node where we want to add these elements
-// var width = 320, height = 240;  // camera image size
-// var faceMode = affdex.FaceDetectorMode.LARGE_FACES;  // face mode parameter
-// Initialize an Affectiva CameraDetector object
-// var detector = new affdex.CameraDetector(divRoot, width, height, faceMode);
-
-// Enable detection of all Expressions, Emotions and Emojis classifiers.
-// detector.detectAllEmotions();
-// detector.detectAllExpressions();
-// detector.detectAllEmojis();
-// detector.detectAllAppearance();
-
-// --- Utility values and functions ---
-
-// Unicode values for all emojis Affectiva can detect
-// var emojis = [ 128528, 9786, 128515, 128524, 128527, 128521, 128535, 128539, 128540, 128542, 128545, 128563, 128561 ];
-
-
 // Update target emoji being displayed by supplying a unicode value
 function setTargetEmoji(code) {
   $("#target").html("&#" + code + ";");
@@ -57,7 +34,6 @@ let canvas = '';
 // Start button
 async function onStart() {
   var input = document.getElementById('local-video-undefined')
-  console.log(`Start!!! : ${input}`)
 
   // const canvas = faceapi.createCanvasFromMedia(input);
   // const displaySize = { width: 480, height: 320 };
@@ -82,6 +58,8 @@ async function onStart() {
       if (res == 'happy'){
         document.getElementById('textl').textContent = '웃으셨네요!'
         clearInterval(f)
+        document.getElementById('buttonLeaveSession').click()
+        alert('quit')
       }
     }
   }, 100)

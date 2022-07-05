@@ -313,3 +313,7 @@ function cleanSessionView() {
 }
 
 /* APPLICATION BROWSER METHODS */
+
+// export default removeUser
+// export default leaveSession
+// module.exports = {removeUser, leaveSession}
