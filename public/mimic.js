@@ -59,7 +59,7 @@ async function onStart() {
         document.getElementById('textl').textContent = '웃으셨네요!'
         clearInterval(f)
         document.getElementById('buttonLeaveSession').click()
-        alert('quit')
+        alert('you Lose!!!')
       }
     }
   }, 100)
